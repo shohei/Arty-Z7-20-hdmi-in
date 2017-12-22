@@ -79,8 +79,8 @@ set_property -dict {PACKAGE_PIN T20 IOSTANDARD TMDS_33} [get_ports {TMDS_data_p[
 set_property -dict {PACKAGE_PIN P20 IOSTANDARD TMDS_33} [get_ports {TMDS_data_n[2]}]
 set_property -dict {PACKAGE_PIN N20 IOSTANDARD TMDS_33} [get_ports {TMDS_data_p[2]}]
 set_property -dict {PACKAGE_PIN T19 IOSTANDARD LVCMOS33} [get_ports {hdmi_hpd_tri_o[0]}]
-set_property -dict { PACKAGE_PIN U14   IOSTANDARD LVCMOS33 } [get_ports { ddc_scl_io }]; #IO_L11P_T1_SRCC_34 Sch=HDMI_RX_SCL
-set_property -dict { PACKAGE_PIN U15   IOSTANDARD LVCMOS33 } [get_ports { ddc_sda_io }]; #IO_L11N_T1_SRCC_34 Sch=HDMI_RX_SDA
+set_property -dict { PACKAGE_PIN U14   IOSTANDARD LVCMOS33 } [get_ports { DDC_scl_io }]; #IO_L11P_T1_SRCC_34 Sch=HDMI_RX_SCL
+set_property -dict { PACKAGE_PIN U15   IOSTANDARD LVCMOS33 } [get_ports { DDC_sda_io }]; #IO_L11N_T1_SRCC_34 Sch=HDMI_RX_SDA
 
 ##HDMI TX Signals
 
@@ -194,10 +194,6 @@ set_property -dict {PACKAGE_PIN J18 IOSTANDARD TMDS_33} [get_ports {TMDS_1_data_
 #set_property PACKAGE_PIN T9 [get_ports {netic20_t9}]; #IO_L12P_T1_MRCC_13
 #set_property PACKAGE_PIN U9 [get_ports {netic20_u9}]; #IO_L17P_T2_13
 
-set_property IOSTANDARD LVCMOS33 [get_ports DDC_scl_io]
-set_property IOSTANDARD LVCMOS33 [get_ports DDC_sda_io]
-set_property PACKAGE_PIN Y18 [get_ports DDC_scl_io]
-set_property PACKAGE_PIN Y19 [get_ports DDC_sda_io]
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
